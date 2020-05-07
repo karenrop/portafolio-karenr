@@ -1,0 +1,134 @@
+/****************************************
+*    Variables
+*****************************************/
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --hover: #551a8b;
+  --font-family: "Roboto", sans-serif;
+}
+
+/****************************************
+ *    Base
+ *****************************************/
+html {
+  height: 100%;
+}
+
+body {
+  color: var(--black);
+  background: var(--white);
+  font-size: 100%;
+  font-size: calc(16px + (20 - 16) * ((100vw - 720px) / (1400 - 720)));
+  font-family: var(--font-family);
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+  cursor: pointer;
+}
+
+a:active,
+a:hover {
+  color: var(--hover);
+  text-decoration: underline;
+}
+
+ul {
+  padding-left: 0;
+}
+
+img {
+  max-width: 100%;
+  padding-top: 3em;
+}
+
+/****************************************
+ *    Components - Common
+ *****************************************/
+/* Menu */
+.menu {
+  display: flex;
+  justify-content: space-around;
+  padding: 2em;
+}
+
+.menu a {
+  text-transform: uppercase;
+}
+
+/* Desktop */
+@media screen and (min-width: 40em) {
+  .site-container {
+    display: grid;
+    grid-template-columns: max-content auto;
+    grid-template-rows: 1fr;
+  }
+
+  .menu {
+    height: 100vh;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+  }
+}
+
+/* Slider Home */
+.slider-container {
+  height: 600px;
+  padding: 0 3em;
+}
+
+/* Desktop */
+@media screen and (min-width: 40em) {
+  .site-container > * {
+    height: 100vh;
+  }
+}
+
+/****************************************
+ *    Helpers
+ *****************************************/
+.centrar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ayuda visual temporal */
+.outline {
+  outline: 2px dotted blue;
+}
+
+/****************************************
+proyectos 
+*****************************************/
+
+.proyectos {
+  background: #e0faf8;
+  background-size: ;
+  font-family: "Quicksand", sans-serif;
+  display: grid;
+  padding-top: 7em;
+  justify-content: center;
+}
+
+.lesgaicinemad {
+  padding-bottom: 3em;
+}
+
+.bibliotecaraybradbury {
+  padding-bottom: 3em;
+}
+
+.guíasdeviajero {
+  padding-bottom: 3em;
+}
+
+.dianchestudiotattoo {
+  padding-bottom: 3em;
+}
+
+.liliumcafé {
+  padding-bottom: 3em;
+}
