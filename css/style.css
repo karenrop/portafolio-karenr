@@ -6,6 +6,7 @@
   --black: #000000;
   --hover: #551a8b;
   --font-family: "Roboto", sans-serif;
+  --font-family-lista: "Quicksand", sans-serif;
 }
 
 /****************************************
@@ -42,6 +43,10 @@ ul {
 img {
   max-width: 100%;
   padding-top: 3em;
+}
+
+[azulpastel] {
+  background: #e0faf8;
 }
 
 /****************************************
@@ -103,16 +108,17 @@ img {
 /****************************************
 proyectos 
 *****************************************/
-
 .proyectos {
-  background: #e0faf8;
-  background-size: ;
-  font-family: "Quicksand", sans-serif;
+  font-family: var(--font-family-lista);
   display: grid;
-  padding-top: 7em;
-  justify-content: center;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 100px;
+  align-items: center;
+  justify-items: center;
+  margin-top: 1em;
 }
 
+/*
 .lesgaicinemad {
   padding-bottom: 3em;
 }
@@ -132,3 +138,4 @@ proyectos
 .liliumcafé {
   padding-bottom: 3em;
 }
+*/
