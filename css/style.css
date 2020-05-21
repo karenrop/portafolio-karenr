@@ -1,3 +1,18 @@
+/* Tipografía */
+@font-face {
+  font-family: "quicksand-regular";
+  src: url("/assets/fonts/Quicksand-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "quicksand-light";
+  src: url("/assets/fonts/Quicksand-Light.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+
 /****************************************
 *    Variables
 *****************************************/
@@ -5,8 +20,8 @@
   --white: #ffffff;
   --black: #000000;
   --hover: #551a8b;
-  --font-family: "Roboto", sans-serif;
-  --font-family-lista: "Quicksand", sans-serif;
+  --font-family: "quicksand-regular";
+  --font-family-light: "quicksand-light";
 }
 
 /****************************************
@@ -109,7 +124,7 @@ img {
 proyectos 
 *****************************************/
 .proyectos {
-  font-family: var(--font-family-lista);
+  font-family: var(--font-family-light);
   display: grid;
   grid-template-columns: 1fr;
   grid-auto-rows: 100px;
@@ -118,24 +133,40 @@ proyectos
   margin-top: 1em;
 }
 
-/*
-.lesgaicinemad {
-  padding-bottom: 3em;
+.titulo {
+  display: grid;
+  justify-items: left;
+}
+.img {
+  max-width: 100%;
+  padding-top: 3em;
 }
 
-.bibliotecaraybradbury {
-  padding-bottom: 3em;
+.descripcionlilium {
+  display: grid;
+  justify-items: left;
 }
 
-.guíasdeviajero {
-  padding-bottom: 3em;
+/****************************************
+ Proyecto Item
+*****************************************/
+.proyecto-item-container {
+  margin: 0 auto;
 }
 
-.dianchestudiotattoo {
-  padding-bottom: 3em;
+.proyecto-item-titulo {
+  font-size: 25px;
+  color: #bebebe;
+  padding: 2em;
 }
 
-.liliumcafé {
-  padding-bottom: 3em;
+.proyecto-item-imagenes {
+  max-width: 100%;
+  margin: 0 auto;
 }
-*/
+
+.proyecto-item-descripcion {
+  max-width: 80vw;
+  margin: 0 auto;
+  font-size: 20px;
+}
