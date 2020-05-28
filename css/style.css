@@ -157,16 +157,16 @@ proyectos
 .proyecto-item-titulo {
   font-size: 25px;
   color: #bebebe;
-  padding: 2em;
+  padding: 2.5em;
 }
 
 .proyecto-item-imagenes {
-  max-width: 100%;
+  max-width: 72%;
   margin: 0 auto;
 }
 
 .proyecto-item-descripcion {
-  max-width: 80vw;
-  margin: 0 auto;
+  max-width: 60vw;
+  margin: 3.5em;
   font-size: 20px;
 }
