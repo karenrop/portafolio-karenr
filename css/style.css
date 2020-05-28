@@ -56,8 +56,8 @@ ul {
 }
 
 img {
+  display: block;
   max-width: 100%;
-  padding-top: 3em;
 }
 
 [azulpastel] {
@@ -65,9 +65,13 @@ img {
 }
 
 /****************************************
- *    Components - Common
+ *    Common
  *****************************************/
-/* Menu */
+/* Layout */
+/*
+.site-container  {
+}
+*/
 .menu {
   display: flex;
   justify-content: space-around;
@@ -86,6 +90,10 @@ img {
     grid-template-rows: 1fr;
   }
 
+  .site-container > * {
+    height: 100vh;
+  }
+
   .menu {
     height: 100vh;
     writing-mode: vertical-rl;
@@ -93,32 +101,9 @@ img {
   }
 }
 
-/* Slider Home */
-.slider-container {
-  height: 600px;
-  padding: 0 3em;
-}
-
-/* Desktop */
-@media screen and (min-width: 40em) {
-  .site-container > * {
-    height: 100vh;
-  }
-}
-
 /****************************************
- *    Helpers
+ *    Home
  *****************************************/
-.centrar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Ayuda visual temporal */
-.outline {
-  outline: 2px dotted blue;
-}
 
 /****************************************
 proyectos 
@@ -161,7 +146,7 @@ proyectos
 }
 
 .proyecto-item-imagenes {
-  max-width: 72%;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -169,4 +154,78 @@ proyectos
   max-width: 60vw;
   margin: 3.5em;
   font-size: 20px;
+}
+
+/****************************************
+ Slider
+*****************************************/
+.slider {
+  display: flex;
+  max-width: max-content;
+  margin: 8vh auto 0;
+}
+
+.imagenes {
+  width: 380px;
+  height: 480px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  order: 2;
+}
+
+.imagen {
+  position: absolute;
+  height: 100%;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  transition: all 0.6s;
+  transform: translatex(-200%);
+}
+
+.imagen.next + .imagen {
+  transform: translatex(200%);
+}
+
+.imagen.anterior {
+  z-index: 10;
+  transform: translatex(-100%);
+}
+
+.imagen.actual {
+  z-index: 10;
+  transform: translatex(0);
+}
+
+.slide.siguiente {
+  z-index: 10;
+  transform: translatex(100%);
+}
+
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover {
+  opacity: 0.5;
+}
+
+button:first-child {
+  order: 1;
+}
+
+button:last-child {
+  order: 3;
+  transform: rotate(180deg);
+}
+
+@media screen and (min-width: 40em) {
+  .slider {
+    margin: auto;
+  }
 }
